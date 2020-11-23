@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import api from "./service/api";
 import Filters from "./components/Filters";
 import CharacterList from "./components/CharacterList";
+import CharacterDetail from "./components/CharacterDetail";
+import { Switch, Route } from "react-router-dom";
 
 const App = () => {
   //destructuring
@@ -25,8 +27,15 @@ const App = () => {
 
   return (
     <div>
-      <Filters getFilteredCaracterValue={getFilteredCaracterValue} />
-      <CharacterList characterList={newFiltededList} />
+      <Switch>
+        <Route exact path="/">
+          <Filters getFilteredCaracterValue={getFilteredCaracterValue} />
+          <CharacterList characterList={newFiltededList} />
+        </Route>
+        <Route exact path="/CharacterDetail/:id">
+          <CharacterDetail />
+        </Route>
+      </Switch>
     </div>
   );
 };

@@ -5,7 +5,7 @@ function CharacterList(props) {
   const Character = props.characterList.map((character) => {
     return (
       <li key={character.id}>
-        <CharacterCard img={character.image} name={character.name} species={character.species} />
+        <CharacterCard id={character.id} img={character.image} name={character.name} species={character.species} />
       </li>
     );
   });
