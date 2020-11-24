@@ -8,7 +8,8 @@ function Error(props) {
       <h1> "No se ha encontrado ningun personaje con ese nombre"</h1>
       <Link className="message__link" to="/">
         Inténtelo de nuevo
-      </Link>
+      </Link>{" "}
+      //onclick para cambio de estado a vacio
     </div>
   );
 }
