@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import api from "./service/api";
 import Filters from "./components/Filters";
+import Error from "./components/Error";
 import CharacterList from "./components/CharacterList";
 import CharacterDetail from "./components/CharacterDetail";
 import { Switch, Route } from "react-router-dom";
@@ -29,8 +30,8 @@ const App = () => {
     <div>
       <Switch>
         <Route exact path="/">
-          <Filters getFilteredCaracterValue={getFilteredCaracterValue} />
-          <CharacterList characterList={newFiltededList} />
+          <Filters value={filteredCard} getFilteredCaracterValue={getFilteredCaracterValue} />
+          {newFiltededList.length > 0 ? <CharacterList characterList={newFiltededList} /> : <Error />}
         </Route>
         <Route exact path="/CharacterDetail/:id">
           <CharacterDetail />

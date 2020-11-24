@@ -5,14 +5,19 @@ function Filters(props) {
     props.getFilteredCaracterValue(ev.target.value);
   };
 
+  const handleFormSubmit = (ev) => {
+    ev.preventDefault();
+  };
+
   return (
     <div>
-      <form action="">
+      <form onSubmit={handleFormSubmit}>
         <input
           type="text"
           name="Rick and Morty"
           id="Rick-and-Morty"
           placeholder="Busca un personaje"
+          value={props.value}
           onChange={handlerInputValue}
         />
       </form>
