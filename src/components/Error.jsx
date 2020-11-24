@@ -3,13 +3,17 @@ import { Link } from "react-router-dom";
 import "./Error.scss";
 
 function Error(props) {
+  const handleClick = () => {
+    props.setFilteredCard("");
+  };
+
   return (
     <div className="message">
       <h1> "No se ha encontrado ningun personaje con ese nombre"</h1>
-      <Link className="message__link" to="/">
+      <div className="errorButton" onClick={handleClick}>
+        {" "}
         Inténtelo de nuevo
-      </Link>{" "}
-      //onclick para cambio de estado a vacio
+      </div>
     </div>
   );
 }

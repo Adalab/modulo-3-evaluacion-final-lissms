@@ -36,7 +36,7 @@ const App = () => {
             {newFiltededList.length > 0 ? (
               <CharacterList className="card_CharacterList" characterList={newFiltededList} />
             ) : (
-              <Error />
+              <Error value={filteredCard} setFilteredCard={setFilteredCard} />
             )}
           </div>
         </Route>

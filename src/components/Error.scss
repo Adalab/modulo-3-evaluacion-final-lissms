@@ -9,7 +9,12 @@
   padding: 10px;
   margin: 60px;
   color: #98c660;
-  &__link {
-    color: #00afc7;
-  }
+}
+.errorButton {
+  border-radius: 25px;
+  background-color: #00afc7;
+  border: solid 2px #98c660;
+  color: black;
+  width: 200px;
+  height: 25px;
 }
