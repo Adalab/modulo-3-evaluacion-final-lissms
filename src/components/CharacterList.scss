@@ -1,0 +1,10 @@
+.ul_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 380px 380px 380px 380px 380px;
+}
+
+.listElement {
+  list-style: none;
+  display: inline-block;
+}

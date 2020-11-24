@@ -5,6 +5,7 @@ import Error from "./components/Error";
 import CharacterList from "./components/CharacterList";
 import CharacterDetail from "./components/CharacterDetail";
 import { Switch, Route } from "react-router-dom";
+import "./app.scss";
 
 const App = () => {
   //destructuring
@@ -30,8 +31,14 @@ const App = () => {
     <div>
       <Switch>
         <Route exact path="/">
-          <Filters value={filteredCard} getFilteredCaracterValue={getFilteredCaracterValue} />
-          {newFiltededList.length > 0 ? <CharacterList characterList={newFiltededList} /> : <Error />}
+          <div className="body">
+            <Filters value={filteredCard} getFilteredCaracterValue={getFilteredCaracterValue} />
+            {newFiltededList.length > 0 ? (
+              <CharacterList className="card_CharacterList" characterList={newFiltededList} />
+            ) : (
+              <Error />
+            )}
+          </div>
         </Route>
         <Route exact path="/CharacterDetail/:id">
           <CharacterDetail />

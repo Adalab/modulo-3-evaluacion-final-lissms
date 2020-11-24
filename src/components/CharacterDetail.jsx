@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import api from "../service/api";
 import { Link } from "react-router-dom";
+import "./CharacterDetail.scss";
 
 function CharacterDetail(props) {
   let myObjetParam = useParams();
@@ -15,14 +16,22 @@ function CharacterDetail(props) {
   }, []);
 
   return (
-    <div>
-      <img src={caracterDatails.image} alt="image" />
-      <h1>{caracterDatails.name}</h1>
-      <h5>{caracterDatails.status}</h5>
-      <h5>{caracterDatails.species}</h5>
-      <h5>{caracterDatails.origin}</h5>
-      <h5>{caracterDatails.episode}</h5>
-      <Link to="/">Volver</Link>
+    <div className="caracterDetail-container">
+      <div className="caracterDatails">
+        <img className="caracterDatails__img" src={caracterDatails.image} alt="image" />
+        <div className="caracterDatails__data">
+          <h1 className="caracterDatails__name">{caracterDatails.name}</h1>
+          <h5 className="caracterDatails__status">{`Status: ${caracterDatails.status}`}</h5>
+          <h5 className="caracterDatails__species">{`Species: ${caracterDatails.species}`}</h5>
+          <h5 className="caracterDatails__origin">{`Origin: ${caracterDatails.origin}`}</h5>
+          <h5 className="caracterDatails__episode">{`Episode: ${caracterDatails.episode}`}</h5>
+          <div className="caracterDatails__link">
+            <Link className="caracterDatails__link--back" to="/">
+              Volver
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

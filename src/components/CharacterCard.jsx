@@ -1,13 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import "../app.scss";
+import "./CharacterCard.scss";
 
 function CharacterCard(props) {
   return (
-    <Link to={`/CharacterDetail/${props.id}`}>
-      <img src={props.img} alt="image" />
-      <h1>{props.name}</h1>
-      <h3>{props.species}</h3>
-    </Link>
+    <div className="card">
+      <img src={props.img} alt="image" className="card__img" />
+      <h1 className="card__name">{props.name}</h1>
+      <p className="card__species">{props.species}</p>
+      <div className="card__button">
+        <Link to={`/CharacterDetail/${props.id}`} className="card__linkclass ">
+          Más detalles
+        </Link>
+      </div>
+    </div>
   );
 }
 

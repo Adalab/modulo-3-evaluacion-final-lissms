@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Error.scss";
 
 function Error(props) {
   return (
-    <div>
+    <div className="message">
       <h1> "No se ha encontrado ningun personaje con ese nombre"</h1>
-      <Link to="/">Inténtelo de nuevo</Link>
+      <Link className="message__link" to="/">
+        Inténtelo de nuevo
+      </Link>
     </div>
   );
 }
