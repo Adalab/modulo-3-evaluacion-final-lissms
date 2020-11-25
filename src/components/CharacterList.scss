@@ -1,7 +1,15 @@
 .ul_list {
   display: grid;
+  padding: 0;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 380px 380px 380px 380px 380px;
+
+  @media all and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media all and (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .listElement {

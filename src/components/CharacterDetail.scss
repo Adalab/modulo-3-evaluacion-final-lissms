@@ -16,10 +16,18 @@
   width: 700px;
   height: 335px;
 
+  @media all and (max-width: 480px) {
+    display: inline;
+    height: 564px;
+  }
+
   &__img {
     margin: 5px;
     width: 321px;
     border-radius: 25px;
+    @media all and (max-width: 480px) {
+      width: 200px;
+    }
   }
   &__data {
     margin: 10px;
