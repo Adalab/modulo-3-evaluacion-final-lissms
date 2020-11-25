@@ -3,7 +3,7 @@
 Ejercicio de evaluacion final del modulo 3 de Adalab.
 
 Tecnologías:
-React (componentes funcionales- props- lifting - eventos -react router - hooks - estados) / JS / SCSS (Grid layout - Flexbox)
+React (componentes funcionales- props- lifting - eventos -react router - hooks - estados) / JS(metodos funcionales de array: map, filter, sort ) / SCSS (Grid layout - Flexbox- diseño responsive)
 
 Consiste en realizar una aplicación, que te permite buscar personajes de la serie Rick and Morty a partir de un Api. 
 Si clickas en uno de los personajes, la pagina te permite acceder a más datos sobre el personaje seleccionado.
