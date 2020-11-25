@@ -4,7 +4,7 @@ import api from "../service/api";
 import { Link } from "react-router-dom";
 import "./CharacterDetail.scss";
 
-function CharacterDetail(props) {
+function CharacterDetail() {
   let myObjetParam = useParams();
 
   const [caracterDatails, setCharacterDetail] = useState({});

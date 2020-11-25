@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "../app.scss";
@@ -17,5 +18,12 @@ function CharacterCard(props) {
     </div>
   );
 }
+
+CharacterCard.propTypes = {
+  img: PropTypes.string,
+  name: PropTypes.string,
+  spacies: PropTypes.string,
+  id: PropTypes.number,
+};
 
 export default CharacterCard;

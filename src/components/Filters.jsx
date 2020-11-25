@@ -2,6 +2,7 @@ import React from "react";
 import "../app.scss";
 import "./Filter.scss";
 import image from "../images/Rick_and_Morty_-_logo_(English).png";
+import PropTypes from "prop-types";
 
 function Filters(props) {
   const handlerInputValue = (ev) => {
@@ -31,5 +32,10 @@ function Filters(props) {
     </>
   );
 }
+
+Filters.propTypes = {
+  value: PropTypes.string,
+  getFilteredCaracterValue: PropTypes.func,
+};
 
 export default Filters;

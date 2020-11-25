@@ -1,5 +1,5 @@
+import PropTypes from "prop-types";
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Error.scss";
 
 function Error(props) {
@@ -16,5 +16,9 @@ function Error(props) {
     </div>
   );
 }
+
+Error.propTypes = {
+  setFilteredCard: PropTypes.func,
+};
 
 export default Error;

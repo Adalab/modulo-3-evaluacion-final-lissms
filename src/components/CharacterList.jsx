@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import CharacterCard from "./CharacterCard";
 import "./CharacterList.scss";
@@ -14,5 +15,9 @@ function CharacterList(props) {
 
   return <ul className="ul_list">{Character}</ul>;
 }
+
+CharacterList.propTypes = {
+  characterList: PropTypes.array,
+};
 
 export default CharacterList;
