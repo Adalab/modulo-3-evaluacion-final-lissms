@@ -8,7 +8,7 @@ import { Switch, Route } from "react-router-dom";
 import "./app.scss";
 
 const App = () => {
-  //destructuring
+  //destructuring//
   const [characterList, setCharacterList] = useState([]);
   const [filteredCard, setFilteredCard] = useState("");
 
