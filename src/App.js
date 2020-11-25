@@ -23,10 +23,10 @@ const App = () => {
     setFilteredCard(value);
   };
 
-  /* const newOrderList = characterList.sort(function (a, b) {
-    return a.name - b.name;
-  });
-  console.log("orderList", newOrderList); */
+  const newOrderList = characterList.sort((a, b) =>
+    a.name.toLowerCase() > b.name.toLowerCase() ? 1 : a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 0
+  );
+  console.log("orderList", newOrderList);
 
   const newFiltededList = characterList.filter((card) => {
     return card.name.toLowerCase().includes(filteredCard.toLowerCase());
